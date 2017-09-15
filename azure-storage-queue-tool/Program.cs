@@ -7,7 +7,7 @@ namespace azure_storage_queue_tool
         private const string connectionString = "<Replace Connection String here and then delete later>";
         static void Main(string[] args)
         {
-            var queueName = "<Insert queue name here";
+            var queueName = "<Insert queue name here>";
             var queueClient = new QueueHelper(connectionString);
 
             //Simple message example
