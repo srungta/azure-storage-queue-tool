@@ -2,7 +2,7 @@
 
 namespace azure_storage_queue_tool
 {
-    class Program
+    static class Program
     {
         private const string connectionString = "<Replace Connection String here and then delete later>";
         static void Main(string[] args)
@@ -16,8 +16,8 @@ namespace azure_storage_queue_tool
             //Multiple message example
             var sampleMultipleMessages = new List<SampleClass>
             {
-                new SampleClass(){MyProperty1 = 1, MyProperty2 = "1"},
-                new SampleClass(){MyProperty1 = 2, MyProperty2 = "2"}
+                new SampleClass{MyProperty1 = 1, MyProperty2 = "1"},
+                new SampleClass{MyProperty1 = 2, MyProperty2 = "2"}
             };
             queueClient.SendBatchMessagesToQueueAsync(queueName, sampleMultipleMessages, true).GetAwaiter().GetResult();
         }
